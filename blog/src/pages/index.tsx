@@ -48,7 +48,7 @@ interface HomeProps {
 
 const Home = ({ blogs }: HomeProps) => {
   // const router = useRouter();
-  
+
   // let newBlogFirst: Blog[] = [...blogs];
   // newBlogFirst.reverse();
 
@@ -57,10 +57,10 @@ const Home = ({ blogs }: HomeProps) => {
       {/* hero section */}
       <Hero
         title="Shreejan Joshi"
-        description="Indulge in the Art of Sushi at Omni Sushi. A Symphony of Flavors, Crafted with Precision and Love. Experience Culinary Excellence with Every Bite."
-        img="https://res.cloudinary.com/dl3qqfbrh/image/upload/v1702218194/home_74bea9fc4d.png"
-        link="menu"
-        button="Menu"
+        description="I am a final-year programming student at AP Hogeschool, currently doing a 4-month internship at Contribute. Follow my blog for weekly updates on my experiences, challenges, and learning journey!"
+        img="https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738959786/bl010liqokzgrkeexkke.jpg"
+        link="blogs"
+        button="Blog"
       />
 
       {/* recent post */}
