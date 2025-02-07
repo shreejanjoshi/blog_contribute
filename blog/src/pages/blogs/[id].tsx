@@ -12,11 +12,14 @@ interface Paths extends ParsedUrlQuery {
 const loadBlog = async () => {
   const token = process.env.TOKEN;
 
-  const response = await fetch("http://localhost:1337/api/blogs", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   const responseData: BlogApiAllList = await response.json();
 
@@ -35,11 +38,14 @@ const loadBlog = async () => {
 export const getStaticPaths: GetStaticPaths<Paths> = async () => {
   const token = process.env.TOKEN;
 
-  const response = await fetch("http://localhost:1337/api/blogs?populate=*", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   const responseData: BlogApiAllList = await response.json();
 
@@ -63,7 +69,7 @@ export const getStaticProps: GetStaticProps<BlogProps, Paths> = async (
   const token = process.env.TOKEN;
 
   const response = await fetch(
-    `http://localhost:1337/api/blogs/${id}?populate=*`,
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs/${id}?populate=*`,
     {
       headers: {
         Authorization: `Bearer ${token}`,

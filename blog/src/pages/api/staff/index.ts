@@ -5,7 +5,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const token = process.env.TOKEN;
 
   if (req.method == "GET") {
-    const response = await fetch("http://localhost:1337/api/staffs", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/staffs`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

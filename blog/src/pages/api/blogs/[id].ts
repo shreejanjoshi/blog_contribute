@@ -9,7 +9,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method == "GET") {
     try {
       const response = await fetch(
-        `http://localhost:1337/api/blogs/${id}?populate=*`,
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs/${id}?populate=*`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

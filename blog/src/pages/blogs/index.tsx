@@ -6,11 +6,14 @@ import { Blog, BlogApiAllList } from "@/types";
 const loadBlog = async () => {
   const token = process.env.TOKEN;
 
-  const response = await fetch("http://localhost:1337/api/blogs", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   const responseData: BlogApiAllList = await response.json();
 

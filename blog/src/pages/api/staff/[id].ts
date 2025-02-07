@@ -8,11 +8,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (req.method == "GET") {
     try {
-      const response = await fetch(`http://localhost:1337/api/staffs/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_STRAPI_URL}/staffs/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const responseData: StaffApiSingleMember = await response.json();
 

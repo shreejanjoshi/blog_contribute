@@ -6,7 +6,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (req.method == "GET") {
     const response = await fetch(
-      "http://localhost:1337/api/blogs?populate=*/",
+      `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*/`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
