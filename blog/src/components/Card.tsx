@@ -8,6 +8,8 @@ interface CardProps {
   subTitle: string;
 }
 
+//gjhg
+
 const Card = ({ id, image, link, title, subTitle }: CardProps) => {
   return (
     <>
