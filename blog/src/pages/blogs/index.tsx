@@ -1,56 +1,16 @@
 import { GetStaticProps } from "next";
 import HashtagHeader from "@/components/hashtagHeader";
 import Card from "@/components/Card";
-import { Blog, BlogApiAllList } from "@/types";
+// import { Blog, BlogApiAllList } from "@/types";
+import { getBlogs } from "../api/dummyData/indexBlog";
+import { Blog } from "../api/dummyData/indexBlog";
 
-const loadBlog = async () => {
-  const token = process.env.TOKEN;
+const BlogPosts = () => {
+  // Get the blogs from the hardcoded data
+  const blogs = getBlogs();
 
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const responseData: BlogApiAllList = await response.json();
-
-  const blogs = responseData.data.map((blog) => {
-    return {
-      id: blog.id,
-      title: blog.attributes.title,
-      image: blog.attributes.image,
-      createdAt: blog.attributes.createdAt,
-    };
-  });
-
-  return blogs;
-};
-
-export const getStaticProps: GetStaticProps<BlogsProps> = async () => {
-  let blogs = await loadBlog();
-
-  // blogs = blogs.map((blog) => ({
-  //   ...blog,
-  //   date: new Date(blog.createdAt).toLocaleDateString("nl-BE"),
-  // }));
-
-  return {
-    props: {
-      blogs: blogs,
-    },
-  };
-};
-
-interface BlogsProps {
-  blogs: Blog[];
-}
-
-const BlogPosts = ({ blogs }: BlogsProps) => {
-  let newBlogFirst: Blog[] = [...blogs];
-  newBlogFirst.reverse();
+  let newBlogFirst: Blog[] = [...blogs]; // Copy the blogs array
+  newBlogFirst.reverse(); // Reverse the order of blogs to show the latest one first
 
   return (
     <>
@@ -61,11 +21,11 @@ const BlogPosts = ({ blogs }: BlogsProps) => {
           description="Feel free to discover and expand your knowledge!"
         />
 
-        <div className="grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-2 gap-16 mt-5 sm:mt-10 md:mt-24 sxl:mt-32 px-5 sm:px-10 md:px-24 sxl:px-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-5 sm:mt-10 md:mt-24 sxl:mt-32 px-5 sm:px-10 md:px-24 sxl:px-32">
           {newBlogFirst.map((blog) => (
             <Card
               key={blog.id}
-              id={blog.id!}
+              id={blog.id}
               image={blog.image}
               link="/blogs/"
               title={blog.title}

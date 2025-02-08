@@ -1,58 +1,22 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import HashtagHeader from "@/components/hashtagHeader";
-import { Blog, BlogApiAllList, BlogApiSingleList } from "@/types";
+// import { Blog, BlogApiAllList, BlogApiSingleList } from "@/types";
 import HomeLayout from "@/components/home/homeLayout";
 import BlogDetailsLayout from "@/components/Blog/blogDetailsLayout";
+import { Blog } from "../api/dummyData/indexBlog";
+import { getBlogs, getBlogById } from "../api/dummyData/indexBlog";
 
 interface Paths extends ParsedUrlQuery {
   id: string;
 }
 
-const loadBlog = async () => {
-  const token = process.env.TOKEN;
-
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const responseData: BlogApiAllList = await response.json();
-
-  const blogs = responseData.data.map((blog) => {
-    return {
-      id: blog.id,
-      title: blog.attributes.title,
-      image: blog.attributes.image,
-      createdAt: blog.attributes.createdAt,
-    };
-  });
-
-  return blogs;
-};
-
+// Get Static Paths (For dynamic routes like /blogs/[id])
 export const getStaticPaths: GetStaticPaths<Paths> = async () => {
-  const token = process.env.TOKEN;
+  const blogs = getBlogs();
 
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs?populate=*`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const responseData: BlogApiAllList = await response.json();
-
-  let paths = responseData.data.map((blog) => ({
-    params: {
-      id: blog.id.toString(),
-    },
+  const paths = blogs.map((blog) => ({
+    params: { id: blog.id.toString() },
   }));
 
   return {
@@ -61,43 +25,27 @@ export const getStaticPaths: GetStaticPaths<Paths> = async () => {
   };
 };
 
+// Get Static Props for each blog post (For static pages)
 export const getStaticProps: GetStaticProps<BlogProps, Paths> = async (
   context
 ) => {
-  let id = parseInt(context.params?.id as string);
+  const id = parseInt(context.params?.id as string);
+  const blog = getBlogById(id);
+  const blogs = getBlogs();
 
-  const token = process.env.TOKEN;
-
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs/${id}?populate=*`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const blog: BlogApiSingleList = await response.json();
-
-  let blogs = await loadBlog();
+  if (!blog) {
+    return {
+      notFound: true, // In case the blog ID doesn't exist
+    };
+  }
 
   return {
     props: {
-      blog: blog.data.attributes,
+      blog: blog,
       blogs: blogs,
     },
   };
 };
-
-// Function to shuffle the array
-// const shuffleArray = (array: Blog[]) => {
-//   for (let i = array.length - 1; i > 0; i--) {
-//     const j = Math.floor(Math.random() * (i + 1));
-//     [array[i], array[j]] = [array[j], array[i]];
-//   }
-
-//   return array;
-// };
 
 interface BlogProps {
   blog: Blog;
@@ -105,9 +53,8 @@ interface BlogProps {
 }
 
 const BlogPost = ({ blog, blogs }: BlogProps) => {
-  let blogPostWithoutCurrentOne: Blog[] = blogs.filter(
-    (allBlogs) => allBlogs.title !== blog.title
-  );
+  // Filter out the current blog post from the list to show other posts
+  const otherBlogs = blogs.filter((otherBlog) => otherBlog.id !== blog.id);
 
   return (
     <>
@@ -123,7 +70,7 @@ const BlogPost = ({ blog, blogs }: BlogProps) => {
         <HomeLayout
           title="Recent Blogs"
           link="/blogs"
-          blogs={blogPostWithoutCurrentOne}
+          blogs={otherBlogs} // Passing other blogs to the HomeLayout component
         />
       </article>
     </>

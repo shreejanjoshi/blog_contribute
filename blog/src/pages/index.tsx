@@ -2,58 +2,12 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import Hero from "@/components/hero";
 import HomeLayout from "@/components/home/homeLayout";
-import { Blog, BlogApiAllList } from "@/types";
+// import { Blog, BlogApiAllList } from "@/types";
+import { getBlogs, Blog } from "./api/dummyData/indexBlog";
 
-const loadBlog = async () => {
-  const token = process.env.TOKEN;
-
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/blogs`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const responseData: BlogApiAllList = await response.json();
-
-  const blogs = responseData.data.map((blog) => {
-    return {
-      id: blog.id,
-      title: blog.attributes.title,
-      image: blog.attributes.image,
-      createdAt: blog.attributes.createdAt,
-    };
-  });
-
-  return blogs;
-};
-
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  let blogs = await loadBlog();
-
-  // blogs = blogs.map((blog) => ({
-  //   ...blog,
-  //   date: new Date(blog.date).toLocaleDateString("nl-BE"),
-  // }));
-
-  return {
-    props: {
-      blogs: blogs,
-    },
-  };
-};
-
-interface HomeProps {
-  blogs: Blog[];
-}
-
-const Home = ({ blogs }: HomeProps) => {
-  // const router = useRouter();
-
-  // let newBlogFirst: Blog[] = [...blogs];
-  // newBlogFirst.reverse();
+// Directly use the hardcoded data without getStaticProps
+const Home = () => {
+  const blogs = getBlogs(); // Get blogs from the hardcoded data
 
   return (
     <main className="flex flex-col items-center justify-center mb-52">
@@ -66,7 +20,7 @@ const Home = ({ blogs }: HomeProps) => {
         button="Blog"
       />
 
-      {/* recent post */}
+      {/* recent posts */}
       <HomeLayout title="Recent Blogs" link="/blogs" blogs={blogs} />
     </main>
   );

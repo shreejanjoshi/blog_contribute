@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Card from "../Card";
-import { Blog, Menu } from "@/types";
+// import { Blog, Menu } from "@/types";
+import { Blog } from "@/pages/api/dummyData/indexBlog";
 
 interface HomeLayoutProps {
   title: string;
   link: string;
   blogs?: Blog[];
-  menus?: Menu[];
 }
 
 const HomeLayout = ({ title, link, blogs, menus }: HomeLayoutProps) => {
@@ -27,20 +27,6 @@ const HomeLayout = ({ title, link, blogs, menus }: HomeLayoutProps) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-16">
           {/* need map here */}
-
-          {link.includes("menu") &&
-            menus
-              ?.slice(-6)
-              .map((menu) => (
-                <Card
-                  key={menu.id}
-                  id={menu.id!}
-                  image={menu.image}
-                  link="/menu/"
-                  title={menu.name}
-                  subTitle={menu.price}
-                />
-              ))}
 
           {link.includes("blogs") &&
             blogs

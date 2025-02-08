@@ -1,4 +1,5 @@
-import { Blog } from "@/types";
+// import { Blog } from "@/types";
+import { Blog } from "@/pages/api/dummyData/indexBlog";
 import Link from "next/link";
 
 interface BlogDetailsLayoutProps {
