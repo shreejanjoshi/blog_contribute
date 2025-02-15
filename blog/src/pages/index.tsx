@@ -14,7 +14,7 @@ const Home = () => {
       {/* hero section */}
       <Hero
         title="Shreejan Joshi"
-        description="I am a final-year programming student at AP Hogeschool, currently doing a 4-month internship at Contribute. Follow my blog for weekly updates on my experiences, challenges, and learning journey!"
+        description="Ik ben een laatstejaars programmeerstudent aan AP Hogeschool en loop momenteel een vier maanden durende stage bij Contribute. Volg mijn blog voor wekelijkse updates over mijn ervaringen, uitdagingen en leerproces!"
         img="https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738959786/bl010liqokzgrkeexkke.jpg"
         link="blogs"
         button="Blog"

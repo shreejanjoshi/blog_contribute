@@ -9,7 +9,7 @@ interface ConatctProps {
 
 export const getStaticProps: GetStaticProps<ConatctProps> = async () => {
   let address = await getAddress();
-  
+
   return {
     props: {
       address: address,
@@ -24,7 +24,7 @@ const Contact = ({ address }: ConatctProps) => {
         {/* hero section */}
         <Hero
           title="Contact"
-          description="Connect with us at Omni Sushi – where every inquiry is a cherished conversation. Reach out to our friendly team for reservations, inquiries, or just to share your sushi experiences. We look forward to hearing from you and making your interaction with Omni Sushi as delightful as our culinary offerings."
+          description="Heb je vragen over mijn stage, projecten of mijn leerproces? Aarzel niet om contact met mij op te nemen! Ik sta open voor feedback, samenwerking en interessante gesprekken."
           img="https://res.cloudinary.com/dl3qqfbrh/image/upload/v1702218390/contact_96c7f85315.png"
           link=""
           button="Home"
