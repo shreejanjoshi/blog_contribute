@@ -35,6 +35,19 @@ const BlogDetailsLayout = ({ blog }: BlogDetailsLayoutProps) => {
         <p className="sm:inline-block mt-4 md:text-lg lg:text-xl font-in">
           {blog.fullText}
         </p>
+
+        {/* Image between the two paragraphs */}
+        {blog.image2 && blog.image2.trim() !== "" && (
+          <img
+            src={blog.image2}
+            alt="Blog Section Image"
+            className="w-full max-w-3xl mx-auto my-6 rounded-lg shadow-lg"
+          />
+        )}
+
+        <p className="sm:inline-block mt-4 md:text-lg lg:text-xl font-in">
+          {blog.fullText2}
+        </p>
         <br />
 
         {/* <span className="mt-2 inline-block">
