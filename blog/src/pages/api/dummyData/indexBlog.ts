@@ -7,6 +7,8 @@ export interface Blog {
   image: string;
   image2?: string;
   createdAt: string; // Add a createdAt field
+  authorName: string;
+  authorImage: string;
 }
 
 const blogs = [
@@ -22,7 +24,10 @@ const blogs = [
     image:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738959785/ox0qaydupvrgfvei6kbc.jpg",
     image2: "",
-    createdAt: "2025-02-07", // Add hardcoded date
+    createdAt: "2025-02-07",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
   {
     id: 2,
@@ -36,6 +41,9 @@ const blogs = [
     image:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1739612393/channels4_profile_gu9fvc.jpg",
     createdAt: "2025-02-15",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
   {
     id: 3,
@@ -48,6 +56,9 @@ const blogs = [
     image:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1740256929/managing-time-l_wswbsj.webp",
     createdAt: "2025-02-22",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
   {
     id: 4,
@@ -62,6 +73,9 @@ const blogs = [
     image2:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1740995068/WhatsApp_Image_2025-03-03_at_10.15.48_04a94d70_tub520.jpg",
     createdAt: "2025-03-03",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
 ];
 

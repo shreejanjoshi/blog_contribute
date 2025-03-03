@@ -50,14 +50,14 @@ const BlogDetailsLayout = ({ blog }: BlogDetailsLayoutProps) => {
         </p>
         <br />
 
-        {/* <span className="mt-2 inline-block">
+        <span className="mt-2 inline-block">
           <img
-            src={blog.author?.data.attributes.image}
-            alt={blog.author?.data.attributes.name}
+            src={blog.authorImage}
+            alt={blog.authorName}
             className="w-10 h-10 rounded-full mr-4"
           />
-          By: {blog.author?.data.attributes.name}
-        </span> */}
+          By: {blog.authorName}
+        </span>
         <span className="mt-2 inline-block">
           {new Date(blog.createdAt).toLocaleDateString("nl-BE")}
         </span>
