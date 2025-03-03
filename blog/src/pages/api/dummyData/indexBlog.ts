@@ -5,7 +5,7 @@ export interface Blog {
   fullText: string;
   fullText2: string;
   image: string;
-  image2: string;
+  image2?: string;
   createdAt: string; // Add a createdAt field
 }
 
