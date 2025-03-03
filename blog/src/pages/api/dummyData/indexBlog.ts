@@ -61,7 +61,7 @@ const blogs = [
       "https://res-console.cloudinary.com/dl3qqfbrh/thumbnails/v1/image/upload/v1740995060/cGhvdG8tMTYzMzUyNjU0MzgxNC05NzE4Yzg5MjJiN2FfdWVjdXFv/preview",
     image2:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1740995068/WhatsApp_Image_2025-03-03_at_10.15.48_04a94d70_tub520.jpg",
-    createdAt: "2025-02-22",
+    createdAt: "2025-03-03",
   },
 ];
 
