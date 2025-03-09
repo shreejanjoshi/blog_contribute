@@ -6,6 +6,7 @@ export interface Blog {
   fullText2: string;
   image: string;
   image2?: string;
+  image3?: string;
   createdAt: string; // Add a createdAt field
   authorName: string;
   authorImage: string;
@@ -69,10 +70,29 @@ const blogs = [
     fullText2:
       "Tijdens dit proces heb ik veel geleerd, vooral over werken met APEX, enkele handige trucs in SQL en hoe je views maakt in SQL om data efficiënter te beheren en op te halen. Dit was een leerzame week waarin ik mijn technische vaardigheden verder heb kunnen ontwikkelen. Ik kijk ernaar uit om mijn kennis nog verder te verdiepen in de komende weken! 🚀",
     image:
-      "https://res-console.cloudinary.com/dl3qqfbrh/thumbnails/v1/image/upload/v1740995060/cGhvdG8tMTYzMzUyNjU0MzgxNC05NzE4Yzg5MjJiN2FfdWVjdXFv/preview",
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1740995060/photo-1633526543814-9718c8922b7a_uecuqo.avif",
     image2:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1740995068/WhatsApp_Image_2025-03-03_at_10.15.48_04a94d70_tub520.jpg",
     createdAt: "2025-03-03",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
+  {
+    id: 5,
+    title: "Verbeteringen aan de Lay-out en Nieuwe Functionaliteiten",
+    short: "UI verbeteringen en API-integratie",
+    fullText:
+      "Deze week hebben we voornamelijk gewerkt aan het verbeteren van de lay-out en look & feel van de applicatie. We hebben een logo toegevoegd, de kleuren aangepast en ervoor gezorgd dat de interface er visueel aantrekkelijker en professioneler uitziet. Voor de ontwerpconcepten hebben we inspiratie gehaald van de website van de Three-Headed Giant, wat hielp bij het bepalen van de stijl en structuur van de applicatie.",
+    fullText2:
+      "Naast de UI-verbeteringen zijn we begonnen met een nieuw ticket, waarin we een knop op elke pagina moesten implementeren. Wanneer deze knop wordt ingedrukt, roept de applicatie een API aan om data op te halen. Dit proces is nog in ontwikkeling en wordt verder uitgewerkt. Daarnaast wordt momenteel het datamodel geüpdatet, wat betekent dat we mogelijk onze Weekday Calendar en Holiday Calendar pagina’s moeten aanpassen om compatibel te blijven met de nieuwe structuur. Dit was een leerzame week waarin ik niet alleen meer inzicht kreeg in UI-ontwerp, maar ook in API-integraties en hoe deze data efficiënt kunnen ophalen. Ik kijk uit naar de komende weken om dit verder uit te werken! 🚀",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1741526625/photo-1573867639040-6dd25fa5f597_hgzwgr.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1741526631/WhatsApp_Image_2025-03-08_at_18.56.19_a938f668_ecnzy9.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1741526641/WhatsApp_Image_2025-03-08_at_18.57.40_62b0ff40_utjr7b.jpg",
+    createdAt: "2025-03-08",
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",

@@ -45,6 +45,15 @@ const BlogDetailsLayout = ({ blog }: BlogDetailsLayoutProps) => {
           />
         )}
 
+        {/* Image between the two paragraphs */}
+        {blog.image3 && blog.image3.trim() !== "" && (
+          <img
+            src={blog.image3}
+            alt="Blog Section Image"
+            className="w-full max-w-3xl mx-auto my-6 rounded-lg shadow-lg"
+          />
+        )}
+
         <p className="sm:inline-block mt-4 md:text-lg lg:text-xl font-in">
           {blog.fullText2}
         </p>
