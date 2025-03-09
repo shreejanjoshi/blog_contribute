@@ -10,6 +10,7 @@ export interface Blog {
   createdAt: string; // Add a createdAt field
   authorName: string;
   authorImage: string;
+  categories: string[];
 }
 
 const blogs = [
@@ -29,6 +30,7 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+    categories: ["Work", "Planning"],
   },
   {
     id: 2,
@@ -45,6 +47,7 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+    categories: ["Coding", "Development"],
   },
   {
     id: 3,
@@ -60,6 +63,7 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+    categories: ["Coding", "Development"],
   },
   {
     id: 4,
@@ -77,6 +81,7 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+    categories: ["Coding", "Development"],
   },
   {
     id: 5,
@@ -96,6 +101,7 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+    categories: ["Coding", "Development"],
   },
 ];
 
