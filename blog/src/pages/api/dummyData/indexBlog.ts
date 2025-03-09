@@ -2,6 +2,7 @@ export interface Blog {
   id: number;
   title: string;
   short: string;
+  categories: string[];
   fullText: string;
   fullText2: string;
   image: string;
@@ -10,7 +11,6 @@ export interface Blog {
   createdAt: string; // Add a createdAt field
   authorName: string;
   authorImage: string;
-  categories: string[];
 }
 
 const blogs = [
@@ -19,6 +19,7 @@ const blogs = [
     title: "Mijn Eerste Week bij Contribute – Een Nieuwe Start",
     short:
       "Mijn stage bij Contribute is officieel begonnen! Het was een boeiende eerste week vol nieuwe ervaringen, kennismakingen en intensieve trainingen. Hier is een overzicht van mijn eerste dagen bij het bedrijf.",
+    categories: ["Internship", "Learning", "Training"],
     fullText:
       "Mijn eerste week bij Contribute was een spannende en leerzame ervaring. Op de eerste dag maakten we kennis met alle collega’s en kregen we onze laptops waarop we de nodige software installeerden. We kregen ook een eerste introductie in Oracle APEX, een platform dat binnen Contribute veel gebruikt wordt.De tweede, derde en vierde dag stonden in het teken van SQL en PL/SQL training. We leerden hoe databases werken, hoe we gegevens kunnen opvragen en bewerken met SQL en hoe we met PL/SQL geavanceerde databasefunctionaliteiten kunnen implementeren.",
     fullText2:
@@ -30,13 +31,13 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
-    categories: ["Work", "Planning"],
   },
   {
     id: 2,
     title: "Mijn Tweede Week bij Contribute – Dieper in Oracle APEX",
     short:
       "De tweede week van mijn stage bij Contribute was gevuld met zelfstudie en verdieping in Oracle APEX. Ik leerde zelfstandig werken en kreeg een beter inzicht in het bouwen van een blogwebsite binnen APEX.",
+    categories: ["Internship", "Oracle APEX", "Self-Study"],
     fullText:
       "Na een boeiende eerste week bij Contribute, waarin we de basis van Oracle APEX en SQL verkenden, doken we deze week dieper in de wereld van APEX. De focus lag vooral op zelfstudie en zelfstandig leren. Dit betekende dat we zelf op onderzoek uitgingen, documentatie doornamen en hands-on ervaring opdeden door met de tool te werken. Eén van de grootste uitdagingen van deze week was het bouwen van een blogwebsite in Oracle APEX. Dit gaf me niet alleen inzicht in hoe je een functionele webapplicatie opzet, maar ook in hoe APEX werkt als low-code ontwikkelplatform.",
     fullText2:
@@ -47,12 +48,12 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
-    categories: ["Coding", "Development"],
   },
   {
     id: 3,
     title: "Start van het 4me-Tia Project",
     short: "Eerste stappen in het 4me-Tia project",
+    categories: ["Internship", "Project Work", "Database"],
     fullText:
       "Deze week zijn we begonnen aan ons eerste project genaamd 4me-Tia. We hebben tickets aangemaakt in JIRA en verbinding gemaakt met de database. Het project draait om het ontwikkelen van APEX-schermen om administratieve taken te vereenvoudigen. We hebben gewerkt aan verschillende onderdelen van de applicatie. Eerst hebben we de loginpagina opgezet om ervoor te zorgen dat beheerders veilig kunnen inloggen. Daarna hebben we de pagina gemaakt waar een organisatie gekozen kan worden, zodat alleen relevante gegevens worden weergegeven. Vervolgens hebben we de medewerkerspagina ontwikkeld om een overzicht te tonen van alle werknemers binnen een organisatie en een klantenpagina om alle klanten weer te geven.",
     fullText2:
@@ -63,12 +64,12 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
-    categories: ["Coding", "Development"],
   },
   {
     id: 4,
     title: "Verder werken aan de Holiday Calendar",
     short: "Holiday Calendar bewerkbaar maken en werken met SQL Views",
+    categories: ["Internship", "Oracle APEX", "SQL"],
     fullText:
       "Deze week heb ik verder gewerkt aan de Holiday Calendar en ervoor gezorgd dat deze nu bewerkbaar en verwijderbaar is. Mijn belangrijkste taak was het selecteren van een specifieke klant binnen een organisatie en vervolgens de bijbehorende vakantiekalendergegevens weergeven. Als er geen klantgebonden vakantiedata beschikbaar waren, moest in plaats daarvan de vakantiedata van de organisatie zelf worden getoond. Daarnaast moesten we views maken voor alle gegevens en deze gebruiken om data weer te geven in APEX",
     fullText2:
@@ -81,12 +82,12 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
-    categories: ["Coding", "Development"],
   },
   {
     id: 5,
     title: "Verbeteringen aan de Lay-out en Nieuwe Functionaliteiten",
     short: "UI verbeteringen en API-integratie",
+    categories: ["Internship", "UI/UX Design", "API Development"],
     fullText:
       "Deze week hebben we voornamelijk gewerkt aan het verbeteren van de lay-out en look & feel van de applicatie. We hebben een logo toegevoegd, de kleuren aangepast en ervoor gezorgd dat de interface er visueel aantrekkelijker en professioneler uitziet. Voor de ontwerpconcepten hebben we inspiratie gehaald van de website van de Three-Headed Giant, wat hielp bij het bepalen van de stijl en structuur van de applicatie.",
     fullText2:
@@ -101,7 +102,6 @@ const blogs = [
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
-    categories: ["Coding", "Development"],
   },
 ];
 
