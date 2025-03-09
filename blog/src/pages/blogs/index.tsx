@@ -58,7 +58,7 @@ const BlogPosts = () => {
         </div> */}
 
         {/* 🔹 Category Filter (Buttons on Large Screens, Dropdown on Small Screens) */}
-        <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4 my-6">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-center gap-4 my-6 mt-5 sm:mt-10 md:mt-24">
           {/* Dropdown on Small Screens */}
           <div className="relative sm:hidden w-64">
             <button
