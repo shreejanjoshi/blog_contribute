@@ -123,6 +123,26 @@ const blogs = [
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
+  {
+    id: 7,
+    title: "Security Page Uitbreiden en Super Admin Logica",
+    short: "Beveiliging uitbreiden en automatische organisatiekoppeling",
+    categories: ["Internship", "Security", "Triggers", "Bug Fixing", "Demo"],
+    fullText:
+      "Deze week heb ik verder gewerkt aan de security pagina, met de focus op het verbeteren van het design en de gebruikerservaring. Een belangrijk onderdeel was het automatiseren van de organisatiekoppeling voor gebruikers met de rol 'Super Administrator'. Hiervoor heb ik een trigger geschreven die, zodra een gebruiker deze rol krijgt, automatisch alle beschikbare organisaties koppelt aan deze gebruiker. Hierdoor krijgt een super admin altijd toegang tot alles, zonder handmatig extra instellingen te doen.",
+    fullText2:
+      "We hebben deze week ook een demo van de applicatie gepresenteerd. Normaal krijgen we na een demo een ticket voor een nieuw project, maar dit keer kwamen er enkele verbeterpunten naar boven. We hebben gewerkt aan het oplossen van kleine bugs en het toevoegen van enkele 'nice to have'-functionaliteiten die de applicatie gebruiksvriendelijker en stabieler maken. Het was een nuttige week waarin ik mijn kennis over triggers, gebruikersbeheer en feedbackverwerking heb kunnen versterken.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742640802/WhatsApp_Image_2025-03-22_at_11.26.26_a44eec0d_krmkwv.jpg",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742640791/WhatsApp_Image_2025-03-22_at_11.26.25_bff9cffb_r7j0gg.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742640822/WhatsApp_Image_2025-03-22_at_11.26.26_d163dc4d_g61he2.jpg",
+    createdAt: "2025-03-22",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
 ];
 
 export const getBlogs = (): Blog[] => {
