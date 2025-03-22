@@ -103,6 +103,26 @@ const blogs = [
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
+  {
+    id: 6,
+    title: "Beveiliging van de Applicatie en Rolbeheer",
+    short: "Rollen, rechten en gebruikersbeheer instellen",
+    categories: ["Internship", "Security", "User Management", "Data Modeling"],
+    fullText:
+      "Deze week stond volledig in het teken van de beveiliging van de applicatie. Mijn taak was om ervoor te zorgen dat alleen gebruikers met de juiste rechten toegang krijgen tot specifieke pagina’s, zoals de beveiligingspagina waar gebruikers kunnen worden beheerd. Hiervoor heb ik eerst een datamodel ontworpen, dat duidelijk maakt welke gebruiker tot welke organisatie behoort en welke rol hij of zij daarin heeft. Daarna heb ik de bijbehorende tabellen aangemaakt en gevuld met testdata. Op basis daarvan kon ik de Security Page bouwen. Op deze pagina zie je een overzicht van alle gebruikers, hun rollen en de organisaties waartoe ze toegang hebben.",
+    fullText2:
+      "We hebben drie rollen gedefinieerd: Super Administrator heeft toegang tot alle pagina’s en kan ook nieuwe gebruikers aanmaken van elk type. Company Administrator heeft toegang tot alle pagina’s, behalve de rolbeheerpagina, en kan Company Users aanmaken. Company User heeft beperkte toegang en kan geen toegang krijgen tot de beveiligingspagina. Met dit systeem zorgen we ervoor dat elke gebruiker enkel toegang krijgt tot wat hij nodig heeft. Dit was een belangrijke stap richting een veilige en schaalbare applicatie. Ik heb deze week veel geleerd over rolgebaseerde toegang, het opzetten van een data-driven securitymodel en het koppelen van gebruikers aan organisaties en permissies.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637936/photo-1614064641938-3bbee52942c7_rggooa.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637914/WhatsApp_Image_2025-03-22_at_10.46.36_a9968fde_fkog5s.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637922/WhatsApp_Image_2025-03-22_at_10.47.37_fcef5ce8_fhwic2.jpg",
+    createdAt: "2025-03-15",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
 ];
 
 export const getBlogs = (): Blog[] => {
