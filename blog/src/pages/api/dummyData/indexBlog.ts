@@ -143,6 +143,32 @@ const blogs = [
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
+  {
+    id: 8,
+    title: "Nieuw Project: Gesprekken Module en Documentenfunctionaliteit",
+    short: "Document upload/download + technische analyse eerste project",
+    categories: [
+      "Internship",
+      "New Project",
+      "File Upload",
+      "Feature Development",
+      "Client Feedback",
+    ],
+    fullText:
+      "Deze week zijn we gestart met een nieuw project waarin we bestaande functionaliteiten moesten uitbreiden. Het project is een gesprekkenmodule waar HR/coördinatoren gesprekken met werknemers kunnen inplannen. Mijn taak was om ervoor te zorgen dat bij het aanmaken van een gesprek documenten zoals Word, PDF of Excel kunnen worden toegevoegd. Deze bijlagen moeten bij het gesprek bewaard worden en consulteerbaar zijn, en bij klikken openen in een aparte tab. Daarnaast heb ik ervoor gezorgd dat gebruikers de toegevoegde bestanden ook kunnen downloaden.",
+    fullText2:
+      "Op donderdag hadden we ook een technische analyse meeting met onze stagebegeleider over het eerste project (4ME-TIA) om te controleren of alles correct werkt. We hebben enkele bugs opgelost en het project overgezet naar de testomgeving. Op vrijdag vond er een meeting plaats met de klant waarin we extra feedback kregen. We moeten nu o.a. een sjabloon toevoegen om feestdagen sneller te configureren, en een nieuwe kolom voorzien om te tonen aan wie een e-mail moet worden gestuurd. Het is dus goed mogelijk dat we binnenkort opnieuw aan dit project werken om deze verbeteringen toe te voegen.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743448694/photo-1542626991-cbc4e32524cc_isopgz.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743448267/WhatsApp_Image_2025-03-31_at_20.56.40_4397df96_aginzy.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743448261/WhatsApp_Image_2025-03-31_at_20.56.30_e0b5d777_ddsvjs.jpg",
+    createdAt: "2025-03-31",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
 ];
 
 export const getBlogs = (): Blog[] => {
