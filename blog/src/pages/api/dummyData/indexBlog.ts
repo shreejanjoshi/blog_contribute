@@ -169,6 +169,26 @@ const blogs = [
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
   },
+  {
+    id: 9,
+    title: "Country Template Functionaliteit Voltooid",
+    short: "Landgebonden feestdagen als sjabloon voor organisaties",
+    categories: ["Internship", "Feature Development", "Calendar", "Templates"],
+    fullText:
+      "Deze week hebben we gewerkt aan het afronden van het project door alle 'nice to have'-functionaliteiten te implementeren. De belangrijkste toevoeging was de nieuwe functionaliteit voor het beheren van country templates. Elk land heeft namelijk zijn eigen feestdagen, en sommige zijn uniek per land. Om dit proces te vergemakkelijken, kunnen super admins nu landen aanmaken in het country template gedeelte, en vervolgens feestdagen toevoegen in de country holidays pagina. Zo ontstaat er per land een sjabloon van feestdagen.",
+    fullText2:
+      "Organisaties kunnen deze sjablonen gebruiken om sneller hun eigen holiday calendar op te bouwen. Via de functie 'Use Template Calendar' kunnen gebruikers een land selecteren en de bijbehorende feestdagen toevoegen aan hun organisatiekalender, op voorwaarde dat ze toegang hebben tot die organisatie. Hierdoor wordt het proces efficiënter en minder foutgevoelig. Het afronden van deze functionaliteit was belangrijk voor de gebruiksvriendelijkheid van het systeem. Deze week stond dus in het teken van afronden, verfijnen en voorbereiden op oplevering.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743967784/photo-1703300450387-047da16a89c4_pf8jky.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743967493/WhatsApp_Image_2025-04-06_at_19.49.59_6a16dc6a_ftcrqy.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1743967519/WhatsApp_Image_2025-04-06_at_19.50.00_ad8dfd4a_nelv9t.jpg",
+    createdAt: "2025-04-06",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
 ];
 
 export const getBlogs = (): Blog[] => {
