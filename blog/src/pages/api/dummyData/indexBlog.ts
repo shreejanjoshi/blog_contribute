@@ -316,7 +316,7 @@ const blogs = [
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1747834291/WhatsApp_Image_2025-05-21_at_13.49.15_093f15ef_kbabm9.jpg",
     image3:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1747834295/WhatsApp_Image_2025-05-21_at_13.49.15_20541570_jxvic3.jpg",
-    createdAt: "2025-05-21",
+    createdAt: "2025-05-11",
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
@@ -337,7 +337,7 @@ const blogs = [
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.49.17_5f8f4341_gvwpx7.jpg",
     image3:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.49.15_aa646fd6_dkmnah.jpg",
-    createdAt: "2025-05-04",
+    createdAt: "2025-05-18",
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
@@ -356,7 +356,7 @@ const blogs = [
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748257165/photo-1591115765373-5207764f72e7_ozsgzd.avif",
     image2:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.51.02_b2c01344_ajx498.jpg",
-    createdAt: "2025-05-04",
+    createdAt: "2025-05-21",
     authorName: "Shreejan Joshi",
     authorImage:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
