@@ -120,8 +120,6 @@ const blogs = [
       "We hebben drie rollen gedefinieerd: Super Administrator heeft toegang tot alle pagina’s en kan ook nieuwe gebruikers aanmaken van elk type. Company Administrator heeft toegang tot alle pagina’s, behalve de rolbeheerpagina, en kan Company Users aanmaken. Company User heeft beperkte toegang en kan geen toegang krijgen tot de beveiligingspagina. Met dit systeem zorgen we ervoor dat elke gebruiker enkel toegang krijgt tot wat hij nodig heeft. Dit was een belangrijke stap richting een veilige en schaalbare applicatie. Ik heb deze week veel geleerd over rolgebaseerde toegang, het opzetten van een data-driven securitymodel en het koppelen van gebruikers aan organisaties en permissies.",
     image:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637936/photo-1614064641938-3bbee52942c7_rggooa.avif",
-    image2:
-      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637914/WhatsApp_Image_2025-03-22_at_10.46.36_a9968fde_fkog5s.jpg",
     image3:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1742637922/WhatsApp_Image_2025-03-22_at_10.47.37_fcef5ce8_fhwic2.jpg",
     createdAt: "2025-03-15",
@@ -291,6 +289,73 @@ const blogs = [
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1746384276/photo-1611302457661-d24c21494f2a_1_ilenxr.avif",
     image2:
       "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1746384047/WhatsApp_Image_2025-05-04_at_20.36.53_3f6370e4_jfj6cw.jpg",
+    createdAt: "2025-05-04",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
+  {
+    id: 14,
+    title: "Doelstellingen Overzicht en Verbeterde Boarding Taken",
+    short:
+      "Deze week heb ik gewerkt aan het tonen van doelstellingen uit het vorige gesprek en verbeteringen aan het onboardingformulier.",
+    categories: [
+      "Internship",
+      "HR Functionalities",
+      "Oracle APEX",
+      "Backoffice",
+      "UX Improvement",
+    ],
+    fullText:
+      "Deze week werkte ik aan twee belangrijke tickets. In het eerste ticket moest ik ervoor zorgen dat tijdens een jaarlijks gesprek de doelstellingen van het vorige gesprek zichtbaar worden. Deze doelstellingen worden bovenaan het formulier getoond zodat HR-medewerkers samen met de werknemer de voortgang en realisatie kunnen bespreken. De doelstelling komt uit het vorige jaarlijkse gesprek waarin de vraag 'Doelstellingen volgend jaar' was beantwoord. Als het huidige gesprek het volgende jaar is, wordt deze waarde opgehaald en weergegeven. Deze functionaliteit is enkel zichtbaar als er een vorig jaarlijks gesprek bestaat. Bij een eerste jaarlijks gesprek is er uiteraard geen voorgaande doelstelling beschikbaar.",
+    fullText2:
+      "Het tweede ticket betrof aanpassingen aan het onboardingformulier. Hier werd de groep verwijderd, het veld ‘Bedrijf’ aangepast van multiselect naar enkelvoudige selectie, en het veld voor taakbeschrijving omgevormd tot een vrij tekstveld. Daarnaast werd logica toegevoegd zodat de verantwoordelijkheidsvelden alleen zichtbaar zijn bij actieve werknemers. Deze verbeteringen zorgen voor een duidelijkere en gebruiksvriendelijkere ervaring voor HR-gebruikers tijdens het aanmaken van boarding taken.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256488/photo-1610540604745-3e96fba9ccef_zyucs9.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1747834291/WhatsApp_Image_2025-05-21_at_13.49.15_093f15ef_kbabm9.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1747834295/WhatsApp_Image_2025-05-21_at_13.49.15_20541570_jxvic3.jpg",
+    createdAt: "2025-05-21",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
+  {
+    id: 15,
+    title: "Herstart met Xurrent-Tia en Introductie tot APEX Project Eye",
+    short:
+      "Deze week stond in het teken van een impactvolle naamswijziging en kennismaking met een krachtige analyse-tool.",
+    categories: ["Internship", "Oracle APEX", "Testing"],
+    fullText:
+      "Tijdens week 15 hebben we opnieuw kort gewerkt aan het Tia4Me-project, dat nu officieel is omgedoopt tot Xurrent-Tia. Deze naamswijziging had een aanzienlijke impact op de applicatie, aangezien veel onderdelen — zoals titels, configuraties en verwijzingen — aangepast moesten worden. Door deze overgang lag de applicatie een volledige dag stil. Het oplossen van deze technische complicaties werd bemoeilijkt doordat onze verantwoordelijke die dag afwezig was.",
+    fullText2:
+      "Daarnaast maakten we kennis met APEX Project Eye, een tool die ons helpt bij het verbeteren van de codekwaliteit binnen onze applicaties. Deze tool genereert een grondige analyse van de APEX-applicatie, toont potentiële fouten en stelt optimalisaties voor. We hebben enkele voorbeelden bekeken en zelf een test uitgevoerd, waarbij duidelijk werd hoe waardevol deze tool kan zijn voor het waarborgen van een professionele en efficiënte ontwikkelomgeving.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748257069/photo-1576444356170-66073046b1bc_olhnpe.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.49.17_5f8f4341_gvwpx7.jpg",
+    image3:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.49.15_aa646fd6_dkmnah.jpg",
+    createdAt: "2025-05-04",
+    authorName: "Shreejan Joshi",
+    authorImage:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1738960869/IMG_3150_web_gmcitd.png",
+  },
+  {
+    id: 16,
+    title: "Laatste Week bij Contribute – Een Mooie Afsluiting",
+    short:
+      "In onze laatste week hebben we Centerfield afgerond en onze stage afgesloten met een eindpresentatie.",
+    categories: ["Internship", "Presentation", "Project Completion"],
+    fullText:
+      "Onze laatste week bij Contribute stond in het teken van afronden en terugblikken. Op maandag hebben we de laatste bugs verholpen en nog enkele kleine functionaliteiten toegevoegd aan het Centerfield-project. Dankzij een goede voorbereiding en efficiënte samenwerking konden we ook voldoende tijd vrijmaken om onze eindpresentatie voor te bereiden.",
+    fullText2:
+      "Dinsdag was het zover: we hebben onze eindpresentatie gegeven aan onze collega’s bij Contribute. Tijdens deze presentatie blikten we terug op onze leerervaringen, de projecten waaraan we hebben gewerkt en de vaardigheden die we hebben ontwikkeld. Het was een fijne en waardevolle afsluiting van een leerrijke stageperiode waarin we enorm veel hebben bijgeleerd over Oracle APEX, projectwerking en samenwerken in een professioneel team.",
+    image:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748257165/photo-1591115765373-5207764f72e7_ozsgzd.avif",
+    image2:
+      "https://res.cloudinary.com/dl3qqfbrh/image/upload/v1748256871/WhatsApp_Image_2025-05-21_at_13.51.02_b2c01344_ajx498.jpg",
     createdAt: "2025-05-04",
     authorName: "Shreejan Joshi",
     authorImage:

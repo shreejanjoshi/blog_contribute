@@ -1,4 +1,10 @@
-import { FacebookIcon, SunIcon, TwitterIcon } from "@/Icons";
+import {
+  FacebookIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  SunIcon,
+  TwitterIcon,
+} from "@/Icons";
 
 const Footer = () => {
   return (
@@ -16,26 +22,26 @@ const Footer = () => {
 
         <div className="flex items-center mt-8">
           <a
-            href="https://www.facebook.com/"
+            href="https://www.linkedin.com/in/shreejanjoshi/"
             className="inline-block w-6 h-6 mr-4"
             aria-label="Reach out to me via LinkedIn"
             target="_blank"
           >
-            <FacebookIcon className="hover:scale-125 transition-all ease duration-200" />
+            <LinkedInIcon className="hover:scale-125 transition-all ease duration-200" />
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://github.com/shreejanjoshi"
             className="inline-block w-6 h-6 mr-4"
             aria-label="Reach out to me via Twitter"
             target="_blank"
           >
-            <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
+            <GitHubIcon className="hover:scale-125 transition-all ease duration-200" />
           </a>
         </div>
 
         <div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
           <span className="text-center">
-            &copy;2023 Shreejan. All rights reserved.
+            &copy;2025 Shreejan. All rights reserved.
           </span>
           <div className="text-center">
             Made with &hearts; by{" "}
@@ -54,4 +60,3 @@ const Footer = () => {
 };
 
 export default Footer;
-  
