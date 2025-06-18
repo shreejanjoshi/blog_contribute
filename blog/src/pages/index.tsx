@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import HomeLayout from "@/components/home/homeLayout";
 // import { Blog, BlogApiAllList } from "@/types";
 import { getBlogs, Blog } from "./api/dummyData/indexBlog";
+import HomeLayout2 from "@/components/home/homeLayout2";
 
 // Directly use the hardcoded data without getStaticProps
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       />
 
       {/* recent posts */}
+      <HomeLayout2 />
       <HomeLayout title="Recent Blogs" link="/blogs" blogs={blogs} />
     </main>
   );
